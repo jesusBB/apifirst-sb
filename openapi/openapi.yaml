@@ -6,7 +6,7 @@ info:
   contact:
     name: Contact our support
     email: jbb@gmail.com
-    url: http://example.com/contact
+    url: springframework.guru
   license:
     name: Apache 2.0
     url: http://www.apache.org/licenses/LICENSE-2.0.html
@@ -33,15 +33,15 @@ tags:
     description: "Example operations for retrieving information."
   - name: Tag
     description: "This is a tag description."
-#x-tagGroups:
-#  - name: General
-#    tags:
-#      - User
-#      - Info
-#      - Echo
-#  - name: Administration
-#    tags:
-#      - Admin
+x-tagGroups:
+  - name: General
+    tags:
+      - User
+      - Info
+      - Echo
+  - name: Administration
+    tags:
+      - Admin
 servers:
   - url: https://{tenant}/api/v1
     variables:
