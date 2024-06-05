@@ -1,0 +1,29 @@
+type: object
+properties:
+  id:
+    type: string
+    format: uuid
+    description: The unique identifier for the payment method
+  displayName:
+    type: string
+    description: The display name for the payment method
+  cardNumber:
+    type: string
+    description: The card number associated with the payment method
+  expiryMonth:
+    type: integer
+    description: The expiry month of the card associated with the payment method
+  expiryYear:
+    type: integer
+    description: The expiry year of the card associated with the payment method
+  cvv:
+    type: integer
+    description: The CVV of the card associated with the payment method
+  dateCreated:
+    type: string
+    format: date-time
+    description: The date and time the payment method was created
+  dateUpdated:
+    type: string
+    format: date-time
+    description: The date and time the payment method was last updated
