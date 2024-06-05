@@ -36,8 +36,6 @@ servers:
         description: Your tenant id
   - url: https://example.com/api/v1
 paths:
-  /users/{username}:
-    $ref: 'paths/users_{username}.yaml'
   /v1/customers:
     $ref: 'paths/v1/customers.yaml'
   /v1/customers/{customer_id}:
@@ -68,21 +66,21 @@ components:
     basic_auth:
       type: http
       scheme: basic
-webhooks:
-  userInfo:
-    post:
-      summary: New user webhook
-      description: "Information about a new user in the system."
-      operationId: userInfo
-      tags:
-        - Info
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: 'components/schemas/User.yaml'
-      responses:
-        '200':
-          description: "Successfully retrieved information about a new user."
-      security:
-        - api_key: []
+#webhooks:
+#  userInfo:
+#    post:
+#      summary: New user webhook
+#      description: "Information about a new user in the system."
+#      operationId: userInfo
+#      tags:
+#        - Info
+#      requestBody:
+#        content:
+#          application/json:
+#            schema:
+#              $ref: 'components/schemas/User.yaml'
+#      responses:
+#        '200':
+#          description: "Successfully retrieved information about a new user."
+#      security:
+#        - api_key: []
