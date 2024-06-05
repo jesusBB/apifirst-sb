@@ -1,0 +1,33 @@
+type: object
+properties:
+    id:
+        type: string
+        format: uuid
+        description: The ID of the product
+        example: 10
+    description:
+        type: string
+    dimensions:
+        $ref: dimensions.yaml
+    categories:
+        type: array
+        items:
+            $ref: category.yaml
+    images:
+        $ref: images.yaml
+    price:
+        type: string
+        pattern: ^[0-9]+(\.[0-9][0-9]?)?$
+        description: The price of the product
+    cost:
+        type: number
+    dateCreated:
+        type: string
+        format: date-time
+        description: The date the product was created
+        example: 2020-01-01
+    dateUpdated:
+        type: string
+        format: date-time
+        description: The date the product was last updated
+        example: 2020-01-01
