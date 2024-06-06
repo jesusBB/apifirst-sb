@@ -4,12 +4,23 @@ properties:
     firstName:
         type: string
         description: The customer's first name
+        minLength: 2
+        maxLength: 100
     lastName:
         type: string
         description: The customer's last name
+        minLength: 2
+        maxLength: 100
     prefix:
         type: string
         description: The customer's title
+        minLength: 0
+        maxLength: 25
     suffix:
         type: string
         description: The customer's name suffix
+        minLength: 0
+        maxLength: 25
+required:
+    - firstName
+    - lastName
