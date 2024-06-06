@@ -1,26 +1,28 @@
 type: object
-
-properties:
-    firstName:
-        type: string
-        description: The customer's first name
-        minLength: 2
-        maxLength: 100
-    lastName:
-        type: string
-        description: The customer's last name
-        minLength: 2
-        maxLength: 100
-    prefix:
-        type: string
-        description: The customer's title
-        minLength: 0
-        maxLength: 25
-    suffix:
-        type: string
-        description: The customer's name suffix
-        minLength: 0
-        maxLength: 25
-required:
-    - firstName
-    - lastName
+properties: 
+  prefix:
+    type: string
+    description: Name Prefix
+    minLength: 0
+    maxLength: 25
+    example: Mr.
+  firstName:
+    type: string
+    description: First Name
+    minLength: 2
+    maxLength: 100
+    example: John
+  lastName:
+    type: string
+    description: Last Name
+    minLength: 2
+    maxLength: 100
+    example: Thompson
+  suffix:
+    type: string  
+    description: Name Suffix
+    minLength: 0
+    maxLength: 25
+required: 
+  - firstName
+  - lastName    
