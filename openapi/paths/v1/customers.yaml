@@ -38,8 +38,8 @@ post:
             type: string
             format: uri
             example: /v1/customers/246541-54-564-444
-    '404':
-      description: Not Found
+    '400':
+      description: Bad Request
       content:
         application/json:
           schema:
