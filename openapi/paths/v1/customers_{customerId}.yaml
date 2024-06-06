@@ -1,17 +1,17 @@
 get:
   tags:
-    - Product
-  summary: Get a product by id
-  description: Get a product by id
-  operationId: getProductById
+    - Customer
+  summary: Get a customer by id
+  description: Get a customer by id
+  operationId: getCustomerById
   parameters:
-    - name: product_id
+    - name: customerId
       in: path
       required: true
       schema:
         type: string
         format: uuid
-        description: The id of the product
+        description: The customer's unique identifier
         example: 10
   responses:
     '200':
@@ -19,7 +19,7 @@ get:
       content:
         application/json:
           schema:
-            $ref: ../../components/schemas/v1/products/product.yaml
+            $ref: ../../components/schemas/v1/customer.yaml
     '400':
       description: Bad Request
 #      content:

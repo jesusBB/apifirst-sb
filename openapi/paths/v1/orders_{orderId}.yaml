@@ -1,17 +1,17 @@
 get:
   tags:
-    - Customer
-  summary: Get a customer by id
-  description: Get a customer by id
-  operationId: getCustomerById
+    - Order
+  summary: Get an order by id
+  description: Get a order by id
+  operationId: getOrderById
   parameters:
-    - name: customer_id
+    - name: orderId
       in: path
       required: true
       schema:
         type: string
         format: uuid
-        description: The customer's unique identifier
+        description: The order's unique identifier
         example: 10
   responses:
     '200':
@@ -19,13 +19,13 @@ get:
       content:
         application/json:
           schema:
-            $ref: ../../components/schemas/v1/customer.yaml
+            $ref: ../../components/schemas/v1/orders/order.yaml
     '400':
       description: Bad Request
-#      content:
-#        application/json:
-#          schema:
-#            $ref: ../../components/schemas/Problem.yaml
+    #      content:
+    #        application/json:
+    #          schema:
+    #            $ref: ../../components/schemas/Problem.yaml
     '404':
       description: Not Found
 #      content:
