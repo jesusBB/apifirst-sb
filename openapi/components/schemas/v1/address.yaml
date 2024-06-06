@@ -33,7 +33,11 @@ properties:
     description: Zip Code 
     minLength: 5
     maxLength: 10  
-    example: 33701      
+    example: 33701
+  dateCreated:
+    $ref: ../common/iso_timestamp.yaml
+  dateUpdated:
+    $ref: ../common/iso_timestamp.yaml
 required: 
   - addressLine1
   - city

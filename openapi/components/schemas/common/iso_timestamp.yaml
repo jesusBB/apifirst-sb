@@ -1,0 +1,6 @@
+type: string
+format: date-time
+description: ISO 8601 timestamp. Date created and last updated are system generated
+example: "2020-01-01T00:06:00Z"
+title: ISO 8601 timestamp
+readOnly: true

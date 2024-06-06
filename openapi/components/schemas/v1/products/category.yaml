@@ -1,23 +1,26 @@
 type: object
-properties:
-    id:
-        type: string
-        format: uuid
-        description: The ID of the category
-        example: 10
-    category:
-        type: string
-        description: The category of the product
-    description:
-        type: string
-        description: A description of the category
-    dateCreated:
-        type: string
-        format: date-time
-        description: The date the image was created
-        example: 2020-01-01
-    dateUpdated:
-        type: string
-        format: date-time
-        description: The date the image was last updated
-        example: 2020-01-01
+properties: 
+  id: 
+    type: string
+    format: uuid
+    description: The unique identifier of the category
+    readOnly: true
+  category: 
+    type: string
+    description: The category of the product
+    minLength: 3
+    maxLength: 25
+    example: Electronics
+  description: 
+    type: string
+    description: The description of the category  
+    minLength: 3
+    maxLength: 255
+    example: Electronics and Gadgets
+  dateCreated:
+    $ref: ../../common/iso_timestamp.yaml
+  dateUpdated:
+    $ref: ../../common/iso_timestamp.yaml
+required:
+  - category
+  - description
