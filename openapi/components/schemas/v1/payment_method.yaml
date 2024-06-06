@@ -1,31 +1,29 @@
 type: object
-properties:
-  id:
+properties: 
+  id: 
     type: string
     format: uuid
-    description: The unique identifier for the payment method
-  displayName:
+    description: Unique identifier representing a specific payment method.
+  displayName: 
     type: string
-    description: The display name for the payment method
     minLength: 2
     maxLength: 100
+    example: My Chase Card
   cardNumber:
-    type: string
-    description: The card number associated with the payment method
+    type: integer
+    example: 1234567890123456
   expiryMonth:
     type: integer
-    description: The expiry month of the card associated with the payment method
+    example: 7
   expiryYear:
     type: integer
-    description: The expiry year of the card associated with the payment method
+    example: 26
   cvv:
     type: integer
-    description: The CVV of the card associated with the payment method
+    example: 123
   dateCreated:
     type: string
     format: date-time
-    description: The date and time the payment method was created
   dateUpdated:
     type: string
-    format: date-time
-    description: The date and time the payment method was last updated
+    format: date-time          

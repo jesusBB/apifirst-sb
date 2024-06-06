@@ -1,37 +1,40 @@
 type: object
-properties:
-  id:
+properties: 
+  id: 
     type: string
     format: uuid
-    description: The customer's unique identifier
-    example: 10
-  addressLine1:
+    description: Unique identifier representing a specific customer
+  addressLine1: 
     type: string
-    description: The first line of the customer's address
+    description: Address Line 1
     minLength: 3
     maxLength: 100
-  addressLine2:
+    example: 123 Main Street
+  addressLine2: 
     type: string
-    description: The second line of the customer's address
+    description: Address Line 2
     minLength: 3
     maxLength: 100
   city:
     type: string
-    description: The city of the customer's address
+    description: City
     minLength: 2
     maxLength: 100
+    example: St Petersburg
   state:
     type: string
-    description: 2 character abbreviation of the state of the customer's address
+    description: 2 character state code
     minLength: 2
     maxLength: 2
-  zip:
+    example: FL
+  zip: 
     type: string
-    description: The zip code of the customer's address
+    description: Zip Code 
     minLength: 5
-    maxLength: 10
-required:
+    maxLength: 10  
+    example: 33701      
+required: 
   - addressLine1
   - city
   - state
-  - zip
+  - zip     
