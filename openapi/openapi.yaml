@@ -6,7 +6,7 @@ info:
   contact:
     name: Contact our support
     email: jbb@gmail.com
-    url: springframework.guru
+    url: http://springframework.guru/contact
   license:
     name: Apache 2.0
     url: http://www.apache.org/licenses/LICENSE-2.0.html
